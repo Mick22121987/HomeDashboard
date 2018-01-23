@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <!--CSS principal-->
+    <link rel="stylesheet" href="Styles/main.css" />
+
+    <!--CSS pour le calendrier-->
+    <link href='Scripts/Externals/fullcalendar-3.8.0/fullcalendar.css' rel='stylesheet' />
+    <link href='Scripts/Externals/fullcalendar-3.8.0/fullcalendar.print.css' media='print' />
+    <title>Home Dashboard</title>
+</head>
+
+<body>
+    <div class="daily-info-tab">
+        <!--Div pour le widget météo-->
+        <div id="cont_6b86aadd6ac971fdc037ee55a0e042e8" class="widget-meteo" />
+        <div id="calendar" class="widget-calendar" />
+    </div>
+
+    <!--Script pour le widget météo-->
+    <script type="text/javascript" async src="https://www.tameteo.com/wid_loader/6b86aadd6ac971fdc037ee55a0e042e8"></script>
+
+    <!--Script pour le calendrier-->
+    <script src="Scripts/Externals/fullcalendar-3.8.0/lib/moment.min.js"></script>
+    <script src="Scripts/Externals/fullcalendar-3.8.0/lib/jquery.min.js"></script>
+    <script src="Scripts/Externals/fullcalendar-3.8.0/lib/jquery-ui.min.js"></script>
+    <script src="Scripts/Externals/fullcalendar-3.8.0/fullcalendar.js"></script>
+    <script src='Scripts/Externals/fullcalendar-3.8.0/gcal.js'></script>
+    <script src='Scripts/Externals/fullcalendar-3.8.0/locale-all.js'></script>
+    <script type='text/javascript'>
+
+        $(document).ready(function ()
+        {
+            $('#calendar').fullCalendar({
+                googleCalendarApiKey: 'AIzaSyAkjCxViVBBIK_tah5s6ieJ15WsieMVnes',
+                eventSources: [
+                    {
+                        googleCalendarId: 'mick.van.aelst@gmail.com'
+                    }
+                ]
+            });
+        });
+
+    </script>
+</body>
+
+</html>
