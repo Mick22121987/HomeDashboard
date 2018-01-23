@@ -15,12 +15,17 @@
 <body>
     <div class="daily-info-tab">
         <!--Div pour le widget météo-->
-        <div id="cont_6b86aadd6ac971fdc037ee55a0e042e8" class="widget-meteo" />
-        <div id="calendar" class="widget-calendar" />
+        <div class="widget-meteo">
+            <div id="cont_a95631c4456da9d5827950e40594368a">
+            </div>
+        </div>
+
+        <!--Div pour le widget Calendar-->
+        <div id="calendar" class="widget-calendar"></div>
     </div>
 
-    <!--Script pour le widget météo-->
-    <script type="text/javascript" async src="https://www.tameteo.com/wid_loader/6b86aadd6ac971fdc037ee55a0e042e8"></script>
+        <!--Script pour le widget météo-->
+        <script type="text/javascript" async src="https://www.tameteo.com/wid_loader/a95631c4456da9d5827950e40594368a"></script>
 
     <!--Script pour le calendrier-->
     <script src="Scripts/Externals/fullcalendar-3.8.0/lib/moment.min.js"></script>
@@ -34,12 +39,33 @@
         $(document).ready(function ()
         {
             $('#calendar').fullCalendar({
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,listMonth'
+                },
+                firstDay: 1,
+                eventLimit: true,
+                locale: 'fr',
+                timeFormat: 'H:mm',
                 googleCalendarApiKey: 'AIzaSyAkjCxViVBBIK_tah5s6ieJ15WsieMVnes',
                 eventSources: [
                     {
-                        googleCalendarId: 'mick.van.aelst@gmail.com'
+                        googleCalendarId: 'mick.van.aelst@gmail.com',
+                        className: 'default-event'
+                    },
+                    {
+                        googleCalendarId: 'fr.be#holiday@group.v.calendar.google.com',
+                        className: "JourFerie"
                     }
-                ]
+                ],
+                eventClick: function (event) {
+                    return false;
+                    if (event.url) {
+                        window.open(event.url);
+                        return false;
+                    }
+                }
             });
         });
 

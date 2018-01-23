@@ -1,20 +1,37 @@
 ﻿body {
     width: 1280px;
-    height: 800px;
-    background-color:gainsboro;
-
+    height: 785px;
 }
 
-.widget-meteo {
-    float: left;
+.widget-meteo{
+    width: 704px;
+    height: 200px;
 }
 
-.spotify-tab {
-    width: 1280px;
-    height: 800px;
+.widget-calendar {
+    height: 600px;
+    width: 706px;
 }
 
-.spotify-frame {
-    width: 1280px;
-    height: 800px;
-}
+    .widget-calendar .fc-content {
+        font-size: 11px;
+    }
+
+    .widget-calendar .fc-button-group {
+        font-size: 12px !important;
+    }
+
+    .widget-calendar .fc-today-button {
+        font-size: 12px !important;
+    }
+
+    .widget-calendar .JourFerie {
+        background-color: cadetblue;
+        border-color: cadetblue;
+    }
+
+    .widget-calendar .default-event {
+        background-color: orangered;
+        border-color: orangered;
+    }
+
