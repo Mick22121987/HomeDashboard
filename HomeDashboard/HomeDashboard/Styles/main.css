@@ -4,13 +4,13 @@
 }
 
 .widget-meteo{
-    width: 704px;
+    width: 630px;
     height: 200px;
 }
 
 .widget-calendar {
     height: 600px;
-    width: 706px;
+    width: 630px;
 }
 
     .widget-calendar .fc-content {
@@ -23,15 +23,5 @@
 
     .widget-calendar .fc-today-button {
         font-size: 12px !important;
-    }
-
-    .widget-calendar .JourFerie {
-        background-color: cadetblue;
-        border-color: cadetblue;
-    }
-
-    .widget-calendar .default-event {
-        background-color: orangered;
-        border-color: orangered;
     }
 

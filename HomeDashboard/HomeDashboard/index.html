@@ -8,7 +8,7 @@
 
     <!--CSS pour le calendrier-->
     <link href='Scripts/Externals/fullcalendar-3.8.0/fullcalendar.css' rel='stylesheet' />
-    <link href='Scripts/Externals/fullcalendar-3.8.0/fullcalendar.print.css' media='print' />
+
     <title>Home Dashboard</title>
 </head>
 
@@ -24,8 +24,9 @@
         <div id="calendar" class="widget-calendar"></div>
     </div>
 
-        <!--Script pour le widget météo-->
-        <script type="text/javascript" async src="https://www.tameteo.com/wid_loader/a95631c4456da9d5827950e40594368a"></script>
+    <!--Script pour le widget météo-->
+    <script type="text/javascript" async src="https://www.tameteo.com/wid_loader/a95631c4456da9d5827950e40594368a"></script>
+
 
     <!--Script pour le calendrier-->
     <script src="Scripts/Externals/fullcalendar-3.8.0/lib/moment.min.js"></script>
@@ -42,7 +43,7 @@
                 header: {
                     left: 'prev,next today',
                     center: 'title',
-                    right: 'month,agendaWeek,listMonth'
+                    right: 'month,listWeek'
                 },
                 firstDay: 1,
                 eventLimit: true,
